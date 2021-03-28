@@ -1,219 +1,176 @@
-@charset "utf-8";
-*{margin:0px;padding: 0px;box-sizing: border-box;outline: none;list-style: none;text-decoration: none;}
-/* start body */
-body{min-height: 100vh;max-width:1440px;margin: 0px auto;font-family:'Commissioner','sans-serif';}
-/* start header */
-    /* start header_top */
-body .header_top{min-height: 100px;width: 100%;display: flex;justify-content: space-between;position:sticky;top: 0px;z-index: 4;background: #fff;}
-body .header_top .content{min-height: inherit;display: flex; align-items: center;position: relative;}
-        /* start .content:first-child */
-body .header_top .content:first-child{min-width: calc(100% - 705px);min-Width:390px;padding-left:156px;}
-        /* start .content:last-child */
-body .header_top .content:last-child{width: 705px;background: #F94F4F;min-Width:438px;padding-right:156px;justify-content: right;}
-            /* start list */
-body .header_top .content:last-child .list li{display: inline-block;}
-body .header_top .content:last-child .list li a{display: block;color: rgb(236, 236, 236);padding: 15px 15px;font-weight: bold;font-size: 17px;}
-body .header_top .content:last-child .list li:last-child a{background: #191921;font-weight: bold;color: #fff;}
-body .header_top .content:last-child .list li:last-child:hover a{background: #434356;}
-body .header_top .content:last-child .list li:hover a{color: rgb(255, 255, 255);}
-            /* start humbrger */
-body .header_top .content:last-child .humbrger{width: 30px;height: 21px;position: absolute;right: 156px;display: none;flex-direction: column;justify-content: space-between;}
-body .header_top .content:last-child .humbrger .bar{width: 100%;height: 3px;background: rgb(0, 0, 0);border-radius: 2px;}
-        /* start media query */
-@media (min-width:280px) and (max-width:965px){
-    body .header_top .content:first-child{padding-left:4em;min-width:75%;}
-    body .header_top .content:last-child{background-color: #fff;padding-right:4em;width:calc(100% - 75%);min-width:calc(100% - 75%);}
-    body .header_top .content:last-child .list{display: none;}
-    body .header_top .content:last-child .humbrger{display: flex;right: 4em;}
-}     
-@media (min-width:280px) and (max-width:490px){
-        body .header_top .content:first-child{padding-left:2em;}
-        body .header_top .content:last-child .humbrger{right: 2em;}
-}
-    /* start header_bottom */
-body .header_bottom{width: 100%;min-height: calc(758px - 80px);display: flex;}
-body .header_bottom .content{width: 50%;min-height: inherit;display: flex;justify-content: center;flex-direction: column;}
-        /* start content_left */
-body .header_bottom .left{padding-left: 156px;z-index: 1;}
-body .header_bottom .left h1{font-size:80px;line-height:88px;min-width:684px;font-weight: bold;}
-body .header_bottom .left p{font-size: 18px;font-weight: bold;min-width: 539px;margin: 39px 0px;color: #000;}
-body .header_bottom .left a{display: block;font-size: 18px;padding: 10px 10px;background: #F94F4F;max-width: max-content;font-weight: bold;color:#fff;}
-body .header_bottom .left a:hover{background-color:#FF9393;}
-        /* start content_right */        
-body .header_bottom .right img{width: 100%;min-height: inherit;}
-    /* start media query =>=> header bottom */    
-@media (min-width:280px) and (max-width:828px){
-    body .header_bottom{flex-direction:column-reverse;justify-content: center;align-items: center;}
-    body .header_bottom .content{width: 100%;min-height: 0px;}
-    body .header_bottom .left{padding: 50px 50px;}
-    body .header_bottom .left h1{min-width: 0px;}
-    body .header_bottom .left p{min-width: 0px;}
-    body .header_bottom .right{min-height: 400px;}
-}
-@media (min-width:280px) and (max-width:641px){
-    body .header_bottom .left h1{max-width: 80%;margin: auto;font-size: 50px;line-height: initial;}
-    body .header_bottom .left p{max-width: 80%;margin:39px auto;}
-    body .header_bottom .left a{margin: auto;}
-}
-@media (min-width:280px) and (max-width:490px){
-        body .header_bottom .left h1{font-size: 30px;text-align: center;max-width: 100%;}
-}
-/* end header */
-/* start main */
-    /* start section_1 */
-main{width: 100%;}
-main .section_1{width: inherit;min-height: 984px;display: flex;justify-content: space-between;align-items:flex-start;}
-        /* start left */
-main .section_1 .left{position: relative;min-height: 984px;overflow: hidden;}
-main .section_1 .left img{width: 100%;min-height:inherit;display: block;}
-        /* start right */
-main .section_1 .right{min-width:705px;min-height: 784px;background-color:#191921;display: flex;justify-content: center;align-items: center;flex-direction: column;position: relative;padding:75px;}
-main .section_1 .right .content_text h2,p{color: #fff;}
-main .section_1 .right .content_text h2 ds{color: #F94F4F;}
-main .section_1 .right .content_text h2{font-size:56px;}
-main .section_1 .right .content_text p{font-size: 18px;font-weight: bold;max-width: 445px;margin: 45px 0px;}
-main .section_1 .right .content_text a{color: #F94F4F;border-bottom: 1.5px solid #F94F4F;padding-bottom: 5px;}
-main .section_1 .right .content_text a:hover{color: #FF9393;border-bottom: 1.5px solid #FF9393;}
-main .section_1 .right .content_text svg{position: absolute;top: 30%;transform: translateX(-50%);left: 0px;width: max-content;}
-@media (min-width:280px) and (max-width:1120px){
-    main .section_1{flex-direction: column;}
-    main .section_1 .left{min-height: 15px;width: 100%;max-height: 40em;}
-    main .section_1 .left img{max-height: inherit;width: 100%;}
-    main .section_1 .right{max-width: 100%;min-width: 100%;min-height: 650px;}
-    main .section_1 .right .content_text svg{transform: scale(.7) translate(50%,-50%);top: 0px;left: 0px;width: max-content;}
-}
-@media (min-width:280px) and (max-width:380px){
-    main .section_1 .right .content_text h2{font-size:46px;}
-    main .section_1 .right .content_text h2,p{text-align: center;}
-    main .section_1 .right .content_text a{display: block;margin: 0px auto;width: max-content;}
-    main .section_1 .right .content_text svg{transform: scale(.5) translate(0%,-100%);}
-}
-    /* end section_1 */
-    /* start section_2 */
-main .section_2{width: inherit;display: flex;justify-content: space-between;align-items:center;flex-direction: row-reverse;position: relative;}
-        /* start content_left */
-main .section_2 .left{width: calc(100% - 895px);min-height: 800px;display: flex;align-items: center;}
-main .section_2 .left h1{height: 192px;color: #000;font-size: 56px;line-height: 64px;position: relative;left: 165px;}
-        /* start content_right */
-main .section_2 .right{width: 895px;min-width:438px;min-height: 1000px;background-color:#F94F4F;margin-top: -200px;display: flex;justify-content: center;align-items:center;}
-            /* start content_phara */
-main .section_2 .right .content_phara{position: relative;left: 92px;}
-main .section_2 .right .content_phara .con{max-width: 445px;position: relative;}
-main .section_2 .right .content_phara .con:nth-child(2){margin: 100px 0px;}
-main .section_2 .right .content_phara .con h1{position: absolute;left: 0px;top:0px;font-size: 80px;color: #FFF;opacity: 0.25;transform: translate(-50%,-50%);}
-main .section_2 .right .content_phara .con .text h2{font-size: 20px;color: #fff;margin-bottom: 24px;}
-main .section_2 .right .content_phara .con .text p{font-size: 18px;color:#fff;}
-@media (min-width:280px) and (max-width:1361px){
-    main .section_2 .left h1{font-size: 41px;left: 1.5em; min-width: 341px;}
-}
-@media (min-width:280px) and (max-width:1120px){
-    main .section_2{flex-direction: column-reverse;background-color:#F94F4F;}
-    main .section_2 .left{width: 100%;justify-content: center;padding:100px 30px 0px 30px;min-height: auto;}
-    main .section_2 .left h1{max-width: 345px;text-align: center;color: #fff;left: 0px;}
-    main .section_2 .right{margin: 0px auto;width: 100%;min-height: 0px;padding: 100px 80px;min-width: 100%;}
-    main .section_2 .right .content_phara{position: static;} 
-    main .section_2 .right .content_phara .con h1{color: #000;}
-    
-}
-@media (min-width:280px) and (max-width:400px){
-    main .section_2 .left h1{font-size: 30px;min-width: 0px;}
-    main .section_2 .right .con h1{text-align:center;transform: translate(0%,-50%);}
-    main .section_2 .right .con .text h2{text-align: center;}
-    main .section_2 .right .con .text p{font-size: 18px;color: #fff;text-align: center;}
-} 
-    /* end section_2 */
-    /* start section_3 */
-main .section_3{width: inherit;display: flex;justify-content: space-between;align-items:flex-start;position: relative;}
-        /* start left */
-main .section_3 .left{width: 718px;height: 528px;background: #191921;z-index: 1;display: flex;align-items: center;justify-content: center;position: relative;}
-main .section_3 .left .content_text{max-width: 445px;}
-main .section_3 .left .content_text h1{color: #fff;font-size: 56px;}
-main .section_3 .left .content_text .h1{position: relative;height: 68px;max-width: 350.5px;overflow: hidden;}
-main .section_3 .left .content_text .h1 .moved{width: 1152px;display: flex;animation: vesible 6s 1s infinite ease-out;position: absolute;left: 0px;}
-main .section_3 .left .content_text .h1 .moved h1{margin: -8px 95px 0px 0px;}
-main .section_3 .left .content_text .svg_element + svg{position: absolute;right: 0px;top: 29%;transform: translateX(50%);}
-main .section_3 .left .content_text .svg_element{margin-top: 66px;}
-main .section_3 .left .content_text .svg_element svg:last-child{margin-left: 10px;}
-main .section_3 .left .content_text .svg_element svg:hover{fill:#FF9393;cursor: pointer;border-radius: 50%;}
-@keyframes vesible{
-    0%{
-        left: 0px;
-    }
-    25%{
-        left: -346px;
-    }
-    50%{
-        left: -757px;
-    }
-    75%{
-        left: -346px;
-    }
-}
-        /* end left */
-        /* start right */
-main .section_3 .right{max-width: 895px;max-height:792px;position: absolute;right: 0px;overflow: hidden;}
-main .section_3 .right .slider{width: calc(895px * 3);height:inherit;display: flex;position: relative;left: calc(-895px * 0);animation: move 6s 1s ease-out backwards infinite;}
-main .section_3 .right .slider .slide{width: 100%;min-height: 792px;position: relative;}
-main .section_3 .right .slider .slide img{position: absolute;top: 0px;width: 100%;height: 100%;}
-main .section_3 .right .slider .slide .text{position: absolute;bottom: 50px;right: 50px;}
-main .section_3 .right .slider .slide .text h3{color: #F94F4F;-webkit-text-stroke: .2px #fff;}
-main .section_3 .right .slider .slide .text span{color: #F94F4F;-webkit-text-stroke: .2px #fff;}
-@keyframes move{
-    0%{
-        left: calc(-895px * 0);
-    }
-    25%{
-        left: calc(-895px * 1);
-    }
-    50%{
-        left: calc(-895px * 2);
-    }
-    75%{
-        left: calc(-895px * 1);
-    }
-}
-        /* end right */
-        /* start media query =>=>=>  */
-@media (min-width:280px) and (max-width:895px){
-    main .section_3{flex-direction: column-reverse;}
-    main .section_3 .left{width: 100%;height: auto;padding: 50px 0px;}
-    main .section_3 .left .content_text h1{font-size: 32px;}
-    main .section_3 .left .content_text .h1 .moved{animation:vesible_1  6s 1s infinite ease-out;left: 1px;}
-    main .section_3 .left .content_text .svg_element{margin:36px auto 0px auto;display: flex;justify-content: center;}
-    main .section_3 .left .content_text .svg_element + svg{display: none;}
-    @keyframes vesible_1{
-        0%{
-            left: 1px;
-        }
-        25%{
-            left: -240px;
-        }
-        50%{
-            left: -520px;
-        }
-        75%{
-            left: -240px;
-        }
-    }
-    main .section_3 .right{position: relative;max-width: 100%;max-height: 450px;}
-    main .section_3 .right .slider{max-width: calc(100% * 3);max-height: 450px;animation: move 6s 1s ease-out backwards infinite;}
-    main .section_3 .right .slider .slide{min-height: 450px;}
-    main .section_3 .right .slider .slide .text{position: absolute;bottom: 20px;right: 50px;}
-    @keyframes move{
-        0%{
-            left: calc(-100% * 0);
-        }
-        25%{
-            left: calc(-100% * 1);
-        }
-        50%{
-            left: calc(-100% * 2);
-        }
-        75%{
-            left: calc(-100% * 1);
-        }
-    }
-}
-        /* end media query =>=>=>  */
-    /* end section_3 */
-/* end main */
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+    <head>
+        <title>project_15-media_query</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initiale-scale=1.0">
+        <link rel="stylesheet" href="project_15-media_query.css" type="text/css">
+        <link rel="stylesheet" href="icon_css/all.min.css" type="text/css"> <!-- for icon -->
+        <link rel="stylesheet" href="icon_css/all.css" type="text/css"> <!-- for icon -->
+        <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- for fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@600&display=swap" rel="stylesheet"> <!-- for fonts -->
+    </head>
+    <body>
+        <!-- start header -->
+            <!-- start header_top -->
+            <div class="header_top">
+                <!-- start content_left -->
+                <div class="content left">
+                    <!-- start logo -->
+                    <svg width="161" height="30" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none" fill-rule="evenodd">
+                            <path d="M47.892 25.742c.757 0 1.44-.03 2.05-.09.608-.06 1.154-.145 1.637-.255.483-.109.922-.24 1.317-.393l-.247-5.197c-.34.219-.691.402-1.053.55-.362.147-.73.256-1.103.327a6.06 6.06 0 01-1.136.107c-.878 0-1.63-.159-2.255-.476-.626-.317-1.103-.756-1.433-1.32-.329-.562-.493-1.22-.493-1.975 0-1.049.299-1.88.897-2.491.598-.612 1.39-.919 2.379-.919.285 0 .625.03 1.02.09s.845.176 1.35.345c.505.17 1.076.434 1.712.795l.428-5.197a8.012 8.012 0 00-1.556-.614 14.125 14.125 0 00-3.844-.533c-1.942 0-3.552.377-4.831 1.13-1.279.755-2.233 1.788-2.864 3.1-.631 1.31-.947 2.803-.947 4.475 0 1.672.348 3.147 1.045 4.426.697 1.279 1.712 2.284 3.046 3.016 1.333.733 2.96 1.099 4.88 1.099zm13.663-.377v-8.968a3.2 3.2 0 01.51-.852c.198-.23.415-.413.65-.55.237-.136.495-.232.775-.286.28-.055.573-.082.88-.082.384 0 .76.005 1.128.016.368.011.782.022 1.243.033l.527-5.902a3.334 3.334 0 00-.89-.245 6.013 6.013 0 00-.79-.066c-.482 0-.974.082-1.473.246-.5.164-.99.462-1.473.893-.483.432-.933 1.063-1.35 1.894h-.494l-.263-2.82-5.12.279v16.41h6.14zM84 17.847c.036-.256.064-.515.085-.777.027-.35.04-.75.04-1.197 0-1.705-.293-3.101-.88-4.189a5.548 5.548 0 00-2.535-2.426c-1.103-.53-2.44-.795-4.009-.795-1.843 0-3.369.369-4.576 1.107a6.853 6.853 0 00-2.708 3.065c-.598 1.306-.897 2.806-.897 4.5 0 1.705.323 3.21.971 4.516.647 1.306 1.665 2.331 3.054 3.074 1.388.743 3.19 1.115 5.407 1.115.878 0 1.685-.046 2.42-.14a15.396 15.396 0 001.976-.368 10.61 10.61 0 001.514-.508l-.197-5.066a9.382 9.382 0 01-1.696.623c-.614.164-1.21.287-1.786.369-.576.082-1.062.123-1.457.123-1.02 0-1.85-.142-2.486-.426-.636-.285-1.105-.697-1.407-1.238a3.46 3.46 0 01-.37-1.048l-.01-.059h9.508l.039-.255zm-9.577-2.498l.005-.038c.05-.435.141-.818.273-1.151.214-.541.5-.951.856-1.23.357-.279.76-.418 1.21-.418.604 0 1.098.265 1.482.795.339.468.528 1.087.568 1.856l.002.065-4.396.12zM90.38 25.79c.768 0 1.452-.129 2.05-.385a5.347 5.347 0 001.555-1c.44-.41.802-.856 1.087-1.336h.411l.412 2.295h5.07V14.414c0-1.4-.266-2.536-.798-3.41-.532-.874-1.303-1.516-2.313-1.926-1.01-.41-2.222-.615-3.638-.615-.801 0-1.57.04-2.305.123a26.05 26.05 0 00-2.074.311c-.647.126-1.24.265-1.778.418a54.99 54.99 0 00-1.432.427l.263 5.098a14.254 14.254 0 014.355-1.32c.444-.06.853-.09 1.226-.09.658 0 1.213.06 1.663.18.45.12.784.307 1.004.558.22.251.318.58.296.983l-4.395.738a10.9 10.9 0 00-1.646.435 6.32 6.32 0 00-1.688.885 4.506 4.506 0 00-1.309 1.524c-.34.629-.51 1.418-.51 2.37 0 .885.173 1.682.519 2.393.345.71.853 1.27 1.522 1.68.67.41 1.487.615 2.453.615zm2.716-4.656c-.35 0-.674-.11-.97-.328-.297-.218-.445-.574-.445-1.065 0-.328.066-.604.197-.828.132-.224.31-.41.535-.558a2.35 2.35 0 01.75-.32c.46-.12.825-.223 1.094-.31.269-.088.477-.173.626-.255a2.1 2.1 0 00.386-.27v2.41a3.638 3.638 0 01-.617.803c-.236.23-.488.407-.757.533a1.874 1.874 0 01-.799.188zm18.29 4.705c.527 0 1.067-.027 1.621-.082a10.6 10.6 0 001.548-.262c.477-.12.875-.268 1.193-.443l-.313-4.869a4.986 4.986 0 01-1.16.558c-.379.12-.727.18-1.045.18-.714 0-1.219-.238-1.515-.713-.296-.476-.444-1.156-.444-2.041v-4.672h4.428V8.955h-4.428v-6.36l-6.058 1.032v5.328h-2.404v4.54h2.404v6.722c0 1.322.221 2.389.664 3.2l.068.12c.488.825 1.196 1.415 2.124 1.77.927.355 2.033.533 3.317.533zm9.828-18.721c1.119 0 1.997-.246 2.634-.738.636-.492.954-1.306.954-2.443 0-.94-.315-1.69-.946-2.254-.631-.563-1.501-.844-2.61-.844-1.108 0-1.983.27-2.625.811-.642.541-.963 1.304-.963 2.287 0 1.137.32 1.951.963 2.443.642.492 1.506.738 2.593.738zm3.094 18.246V8.79l-6.14.164v16.41h6.14zm14.207 0c.362-1.039.719-2.069 1.07-3.09.351-1.022.703-2.047 1.054-3.074l1.004-2.918c.428-1.224.853-2.448 1.276-3.673l1.26-3.655h-6.536l-.618 2.869-.666 3.082-.823 3.885h-.478l-.823-3.869c-.22-1.027-.436-2.055-.65-3.082-.214-1.027-.43-2.05-.65-3.066l-6.635.18c.428 1.214.854 2.43 1.276 3.648.423 1.219.842 2.435 1.26 3.648l1.004 2.901c.362 1.017.724 2.05 1.086 3.099.362 1.049.719 2.087 1.07 3.115h6.52zm22.279-7.518c.036-.256.064-.515.085-.777.027-.35.041-.75.041-1.197 0-1.705-.294-3.101-.88-4.189a5.548 5.548 0 00-2.536-2.426c-1.103-.53-2.439-.795-4.008-.795-1.844 0-3.37.369-4.577 1.107a6.853 6.853 0 00-2.708 3.065c-.598 1.306-.897 2.806-.897 4.5 0 1.705.324 3.21.971 4.516.648 1.306 1.666 2.331 3.054 3.074 1.388.743 3.19 1.115 5.408 1.115.878 0 1.684-.046 2.42-.14a15.396 15.396 0 001.975-.368 10.61 10.61 0 001.515-.508l-.198-5.066a9.382 9.382 0 01-1.696.623c-.614.164-1.21.287-1.786.369-.576.082-1.061.123-1.457.123-1.02 0-1.849-.142-2.485-.426-.637-.285-1.106-.697-1.408-1.238a3.46 3.46 0 01-.37-1.048l-.01-.059h9.508l.039-.255zm-9.576-2.498l.004-.038c.05-.435.142-.818.273-1.151.215-.541.5-.951.857-1.23.356-.279.76-.418 1.21-.418.603 0 1.097.265 1.481.795.339.468.528 1.087.568 1.856l.002.065-4.395.12z" fill="#000" fill-rule="nonzero"/>
+                            <path d="M13 4c6.08 0 11.186 4.175 12.607 9.814h-1.964c-.094.516-.283.93-.567 1.243-.284.312-.696.468-1.236.468-.486 0-1.013-.13-1.58-.387a52.835 52.835 0 01-1.845-.886 14.576 14.576 0 00-2.198-.875c-.804-.251-1.685-.377-2.645-.377-1.729 0-3.09.733-4.083 2.2-.937 1.384-1.432 3.234-1.484 5.551L8 21.165h4.357c.094-.502.307-.91.638-1.222.33-.312.773-.468 1.327-.468.46 0 .966.126 1.52.377a65.15 65.15 0 011.864.886c.69.339 1.449.634 2.28.885A9.31 9.31 0 0022.69 22c1.004 0 1.879-.275 2.625-.825C23.577 26.305 18.72 30 13 30 5.82 30 0 24.18 0 17S5.82 4 13 4z" fill="#F94F4F"/>
+                        </g>
+                    </svg>
+                </div>
+                <!-- start content_right -->
+                <div class="content right">
+                    <div class="list">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Schedule a Call</a></li>
+                    </div>
+                    <label class="humbrger" for="check_menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </label>
+                </div>
+            </div>   
+            <!-- start header_bottom -->
+            <div class="header_bottom">
+                <div class="content left">
+                    <h1>Branding & website design agencey</h1>
+                    <p>We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impression to audiences in a digital world.</p>
+                    <a href="#" title="learn more">Learn More</a>
+                </div>
+                <div class="content right">
+                    <img src="images/image-hero.jpg">
+                </div>
+            </div>
+        <!-- start main -->
+        <main>
+            <!-- start section_1 -->
+            <div class="section_1">
+                <div class="content left">
+                    <img src="images/image-strategic.jpg">
+                </div>
+                <div class="content right">
+                    <div class="content_text">
+                        <h2><ds>Design</ds> is <br>strategic.</h2>
+                        <p>"A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm believers that success lies in creative collaboration with our clients."</p>
+                        <a href="#">Schedule a Call</a>
+                        <!-- start svg -->
+                        <svg width="135" height="61" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M98.882 60.408c10.951 0 19.618-4.864 25.999-14.593 6.38-9.728 9.571-23.054 9.571-39.977h-29.19c-.633 3.439-1.9 6.199-3.8 8.28-1.902 2.082-4.662 3.123-8.283 3.123-3.258 0-6.788-.86-10.59-2.58a354.773 354.773 0 01-12.354-5.905C65.8 6.54 60.89 4.594 55.505 2.92 50.119 1.245 44.214.408 37.787.408c-11.585 0-20.704 4.887-27.356 14.66C3.778 24.843.452 38.1.452 54.843h29.19c.633-3.348 2.059-6.063 4.276-8.144 2.218-2.082 5.182-3.123 8.893-3.123 3.077 0 6.471.838 10.182 2.512a437.483 437.483 0 0112.49 5.905c4.616 2.262 9.708 4.23 15.274 5.905 5.566 1.674 11.608 2.511 18.125 2.511z" fill="#F94F4F" fill-rule="nonzero"/>
+                        </svg>
+                    </div>    
+                </div>
+            </div>
+            <!-- end section_1 -->
+            <!-- start section_2 -->
+            <div class="section_2">
+                <!-- start content_right -->
+                <div class="content right">
+                    <div class="content_phara">
+                        <div class="con c1">
+                            <h1>01</h1>
+                            <div class="text">
+                                <h2>Brand Strategy</h2>
+                                <p>Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
+                            </div>
+                        </div>
+                        <div class="con c2">
+                            <h1>02</h1>
+                            <div class="text">
+                                <h2>Brand Design</h2>
+                                <p>Keeping the brands design unique and meaningful helps in communicating the brand's timeless value effectively.</p>
+                            </div>
+                        </div>
+                        <div class="con c3">
+                            <h1>03</h1>
+                            <div class="text">
+                                <h2>Web Design</h2>
+                                <p>Abeautifull crafted website is the best tool for brand awareness, and ultimately results in increased revenues.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- start content_left -->
+                <div class="content left">
+                    <h1>Our approach for creating a winning brand</h1>
+                </div>
+            </div>
+            <!-- end section_2 -->
+            <!-- start section_3 -->
+            <div class="section_3">
+                <!-- start content_left -->
+                <div class="content left">
+                    <div class="content_text">
+                        <h1>Brand naming &</h1>
+                        <div class="h1">
+                            <div class="moved">
+                                <h1>guidelines</h1>
+                                <h1>merchandise</h1>
+                                <h1>web design</h1>
+                            </div>
+                        </div>
+                        <div class="svg_element">
+                            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                                <g transform="matrix(-1 0 0 1 40 0)" stroke="#F94F4F" fill="none" fill-rule="evenodd">
+                                    <circle cx="20" cy="20" r="19.5"/>
+                                    <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
+                                </g>
+                            </svg>
+                            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke="#F94F4F" fill="none" fill-rule="evenodd">
+                                    <circle cx="20" cy="20" r="19.5"/>
+                                    <path stroke-width="2" d="M17.5 15l5 5-5 5"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <svg width="134" height="60" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M98.43 0c10.951 0 19.618 4.864 25.999 14.593C130.809 24.32 134 37.647 134 54.57h-29.19c-.633-3.439-1.9-6.199-3.8-8.28-1.902-2.082-4.662-3.123-8.283-3.123-3.258 0-6.788.86-10.59 2.58a354.77 354.77 0 00-12.354 5.905c-4.435 2.217-9.345 4.162-14.73 5.837C49.667 59.163 43.762 60 37.335 60 25.75 60 16.631 55.113 9.98 45.34 3.326 35.565 0 22.307 0 5.565h29.19c.633 3.348 2.059 6.063 4.276 8.144 2.218 2.082 5.182 3.123 8.893 3.123 3.077 0 6.471-.838 10.182-2.512a437.497 437.497 0 0012.49-5.905c4.616-2.262 9.708-4.23 15.274-5.905C85.871.837 91.913 0 98.43 0z" fill="#FFF" fill-rule="nonzero"/>
+                        </svg>
+                    </div>
+                </div>
+                <!-- start content_right -->
+                <div class="content right">
+                    <!-- start slider -->
+                    <div class="slider">
+                        <div class="slide s1">
+                            <img src="images/image-slide-1.jpg">
+                            <div class="text">
+                                <h3>Learn Product Roadmap</h3>
+                                <span>2019 Project</span>
+                            </div>
+                        </div>
+                        <div class="slide s2">
+                            <img src="images/image-slide-2.jpg">
+                            <div class="text">
+                                <h3>New Majestic Hotel</h3>
+                                <span>2018 Project</span>
+                            </div>
+                        </div>
+                        <div class="slide s3">
+                            <img src="images/image-slide-3.jpg">
+                            <div class="text">
+                                <h3>Crypto Dashboard</h3>
+                                <span>2016 Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end section_3 -->
+        </main>
+        <!-- end main -->
+        <!-- start footer -->
+        <footer>
+            
+        </footer>
+        <!-- end footer -->
+    </body>    
+</html>
